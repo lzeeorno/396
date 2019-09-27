@@ -51,11 +51,10 @@ for symbol in message:
             translated = translated + SYMBOLS[translatedIndex].upper()
         else:
             translated = translated + SYMBOLS[translatedIndex].lower()
-	count += 1
+        count += 1
     else:
         # Append the symbol without encrypting/decrypting:
         translated = translated + symbol
 
 # Output the translated string:
 print(translated)
-

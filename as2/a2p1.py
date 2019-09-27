@@ -6,7 +6,7 @@ import sys
 # The string to be encrypted/decrypted:
 message = sys.argv[3:]
 message = ' '.join(message)
-message = eval(message)
+#message = eval(message)
 
 
 # The encryption/decryption key:
@@ -50,4 +50,3 @@ for symbol in message:
 
 # Output the translated string:
 print(translated)
-
