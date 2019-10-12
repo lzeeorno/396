@@ -4,7 +4,7 @@
 import math#,pyperclip
 
 def main():
-    myMessage = 'ADGCFBE'
+    myMessage = 'Nyx mjfqymd yt iwnsp qtyx tk bfyjw.'
     myKey = [1,3,2]
 
     plaintext = decryptMessage(myKey, myMessage)
@@ -42,10 +42,10 @@ def decryptMessage(key, message):
             row += 1;
         plaintext[column][key[row]-1] = symbol
         column += 1 # Point to next column.
-     
-        
-    
-    
+
+
+
+
 
     answerprint=''
     for i in range(numOfColumns):
