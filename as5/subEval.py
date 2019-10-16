@@ -1,9 +1,9 @@
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 def evalFile(f1, f2):
-    op = open(f1, encoding='UTF-8',errors='ignore')
+    op = open(f1)
     plain = op.read()
     op.close()
-    op = open(f2, encoding = 'UTF-8')
+    op = open(f2)
     imperfect = op.read()
     op.close()
 
@@ -34,7 +34,7 @@ def evalFile(f1, f2):
 
     deciphermentAccuracy = 0
     
-    for i in range(len(list2)):
+    for i in range(len(list1)):
         if list1[i] == list2[i]:
             deciphermentAccuracy += 1
     deciphermentAccuracy = deciphermentAccuracy/len(list1)
