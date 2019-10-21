@@ -1,12 +1,16 @@
-import random
+#question2
 
+import random
+#function of encryptMessage with subKey
 def encryptMessage(subKey, codeBook, message):
     letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     wordList = message.split(' ')
     for i in range(len(wordList)):
         transWord=''
+        #if letter is upper case
         if wordList[i].upper() in codeBook:
             wordList[i] = random.choice(codeBook[wordList[i].upper()])
+            #if letter is lower case
         elif wordList[i].lower() in codeBook:
             wordList[i] = random.choice(codeBook[wordList[i].lower()])
         elif wordList[i].title() in codeBook:
@@ -23,13 +27,14 @@ def encryptMessage(subKey, codeBook, message):
                     transWord += symbol
             wordList[i] = transWord
     return ' '.join(wordList)
-                        
-                    
+
+
 def decryptMessage(subKey, codeBook, message):
     letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     wordList = message.split(' ')
     for i in range(len(wordList)):
         transWord=''
+        #symbol handle problem
         if wordList[i].replace(',','').replace("'",'').replace('.','').isalpha():
             for symbol in wordList[i]:
                 if symbol.upper() in subKey:
