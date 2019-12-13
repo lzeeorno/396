@@ -12,7 +12,7 @@ def stringIC(inputstr):
         IC += fre_count[key]*(fre_count[key]-1) #ci(ci − 1)
 
     if len(inputstr) <= 1:#input len = 1
-        return 0;
+        return 0
     else:
         return IC/(len(inputstr)*(len(inputstr)-1)) #IC/N(N-1) N=len(inputstr)
         
